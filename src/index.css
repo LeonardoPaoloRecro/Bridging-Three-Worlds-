@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer utilities {
+  .balanced-text {
+    text-wrap: balance;
+  }
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+  background-color: #020617; /* slate-950 */
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+.deck-backdrop {
+  background:
+    linear-gradient(115deg, rgba(20, 184, 166, 0.18) 0%, transparent 28%),
+    linear-gradient(245deg, rgba(244, 114, 182, 0.14) 0%, transparent 34%),
+    linear-gradient(180deg, rgba(251, 191, 36, 0.08) 0%, transparent 30%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 0,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 84px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.025) 0,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 84px
+    ),
+    #071018;
+}
+
+.deck-shell ::selection {
+  background: rgba(45, 212, 191, 0.35);
+}
+
+.deck-shell * {
+  scrollbar-color: rgba(148, 163, 184, 0.45) transparent;
+}
